@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "295257486743",
+    "project_id": "paging-ed290",
+    "storage_bucket": "paging-ed290.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:295257486743:android:5e087066f68b13d63d00d2",
+        "android_client_info": {
+          "package_name": "com.alexmumo.paging"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "295257486743-h4j60vajgjomhpgpsmbu15h4kegl0fiu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAPK4Z7leoKqOUl-rBjqpcxivn74pPZC5I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "295257486743-h4j60vajgjomhpgpsmbu15h4kegl0fiu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
