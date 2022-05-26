@@ -65,6 +65,7 @@ dependencies {
     testImplementation "androidx.paging:paging-common:$paging_version"
     implementation "androidx.paging:paging-runtime:$paging_version"
     implementation "androidx.paging:paging-compose:1.0.0-alpha14"
+    implementation "androidx.room:room-paging:2.5.0-alpha01"
 
     // Koin
     implementation "io.insert-koin:koin-android:$koin_version"
