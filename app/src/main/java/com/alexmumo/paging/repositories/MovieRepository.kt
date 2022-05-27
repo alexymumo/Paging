@@ -8,6 +8,7 @@ import com.alexmumo.paging.data.cache.db.MovieDb
 import com.alexmumo.paging.data.cache.entity.Movie
 import com.alexmumo.paging.data.mediator.MovieRemoteMediator
 import com.alexmumo.paging.data.network.ApiService
+import com.alexmumo.paging.utils.Constants.PAGE_SIZE
 import kotlinx.coroutines.flow.Flow
 
 @OptIn(ExperimentalPagingApi::class)
@@ -18,8 +19,14 @@ class MovieRepository constructor(
 
     fun fetchMovies(): Flow<PagingData<Movie>> {
         return Pager(
-            config = PagingConfig(pageSize = 20, enablePlaceholders = false),
-            remoteMediator = MovieRemoteMediator(apiService = apiService, database = database),
+            config = PagingConfig(
+                pageSize = PAGE_SIZE,
+                enablePlaceholders = false
+            ),
+            remoteMediator = MovieRemoteMediator(
+                apiService = apiService,
+                database = database
+            ),
             pagingSourceFactory = {
                 database.movieDao().pagingSource()
             }
