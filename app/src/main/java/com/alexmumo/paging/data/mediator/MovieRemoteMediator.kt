@@ -6,13 +6,15 @@ import androidx.paging.PagingState
 import androidx.paging.RemoteMediator
 import com.alexmumo.paging.data.cache.db.MovieDb
 import com.alexmumo.paging.data.cache.entity.Movie
+import com.alexmumo.paging.data.network.ApiService
 import retrofit2.HttpException
 import java.io.IOException
 
 @OptIn(ExperimentalPagingApi::class)
 class MovieRemoteMediator(
     private val query: String,
-    private val database: MovieDb
+    private val database: MovieDb,
+    private val apiService: ApiService
 ) : RemoteMediator<Int, Movie>() {
     val gameDao = database.gameDao()
     override suspend fun load(
