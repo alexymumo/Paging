@@ -12,11 +12,11 @@ import java.io.IOException
 
 @OptIn(ExperimentalPagingApi::class)
 class MovieRemoteMediator(
-    private val query: String,
     private val database: MovieDb,
     private val apiService: ApiService
 ) : RemoteMediator<Int, Movie>() {
-    val gameDao = database.gameDao()
+    val movieDao = database.movieDao()
+    val remoteDao = database.remoteDao()
     override suspend fun load(
         loadType: LoadType,
         state: PagingState<Int, Movie>
@@ -27,8 +27,7 @@ class MovieRemoteMediator(
                 }
                 LoadType.APPEND -> {
                 }
-                LoadType.REFRESH -> {
-                }
+                LoadType.REFRESH -> null
             }
             MediatorResult.Success(endOfPaginationReached = true)
         } catch (e: IOException) {

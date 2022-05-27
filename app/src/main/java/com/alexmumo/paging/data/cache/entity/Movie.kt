@@ -3,7 +3,7 @@ package com.alexmumo.paging.data.cache.entity // ktlint-disable filename
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-@Entity(tableName = "game")
+@Entity(tableName = "popular_movies")
 data class Movie(
     @PrimaryKey(autoGenerate = true)
     val movieId: Int,

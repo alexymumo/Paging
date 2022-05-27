@@ -10,8 +10,8 @@ import com.alexmumo.paging.data.cache.entity.Movie
 @Dao
 interface MovieDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun saveGame(game: List<Movie>)
+    suspend fun saveMovie(movie: List<Movie>)
 
-    @Query("SELECT * FROM game WHERE name LIKE :query")
-    fun pagingSource(query: String): PagingSource<Int, Movie>
+    @Query("SELECT * FROM popular_movies")
+    fun pagingSource(): PagingSource<Int, Movie>
 }

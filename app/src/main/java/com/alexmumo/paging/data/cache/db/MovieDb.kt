@@ -13,6 +13,6 @@ import com.alexmumo.paging.data.cache.entity.RemoteKey
     exportSchema = false
 )
 abstract class MovieDb : RoomDatabase() {
-    abstract fun gameDao(): MovieDao
+    abstract fun movieDao(): MovieDao
     abstract fun remoteDao(): RemoteDao
 }
