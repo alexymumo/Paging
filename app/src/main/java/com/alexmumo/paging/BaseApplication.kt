@@ -2,6 +2,8 @@ package com.alexmumo.paging
 
 import android.app.Application
 import com.alexmumo.paging.data.network.di.networkModule
+import com.alexmumo.paging.data.repository.di.repositoryModule
+import com.alexmumo.paging.ui.di.presentationModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
@@ -14,9 +16,9 @@ class BaseApplication : Application() {
     }
 
     private fun initKoin() {
-        val modules = listOf(networkModule)
+        val modules = listOf(networkModule, repositoryModule, presentationModule)
         startKoin {
-            androidLogger(level = Level.DEBUG)
+            androidLogger(level = Level.NONE)
             androidContext(this@BaseApplication)
             modules(modules)
         }

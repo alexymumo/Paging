@@ -5,21 +5,24 @@ import androidx.compose.material.Card
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.ImageBitmap
-import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.res.imageResource
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
-import com.alexmumo.paging.R
+import coil.request.ImageRequest
 import com.skydoves.landscapist.coil.CoilImage
 
 @Composable
-fun MovieItem() {
+fun MovieItem(
+    imageString: String,
+    modifier: Modifier = Modifier
+) {
     Card(modifier = Modifier.padding(5.dp)) {
         CoilImage(
-            imageModel = "imageUrl",
+            imageRequest = ImageRequest
+                .Builder(LocalContext.current)
+                .data(imageString)
+                .crossfade(true)
+                .build(),
             alignment = Alignment.Center,
-            placeHolder = ImageBitmap.imageResource(R.drawable.ic_account),
-            contentScale = ContentScale.Crop,
             contentDescription = "movie image"
         )
     }
