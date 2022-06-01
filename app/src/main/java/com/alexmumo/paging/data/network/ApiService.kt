@@ -1,6 +1,6 @@
 package com.alexmumo.paging.data.network
 
-import com.alexmumo.paging.data.cache.entity.Movie
+import com.alexmumo.paging.model.response.PopularResponse
 import com.alexmumo.paging.utils.Constants.APIKEY
 import retrofit2.http.GET
 import retrofit2.http.Query
@@ -10,5 +10,5 @@ interface ApiService {
     suspend fun fetchPopularMovies(
         @Query("page") page: Int = 1,
         @Query("api_key") apiKey: String = APIKEY
-    ): Movie
+    ): PopularResponse
 }
