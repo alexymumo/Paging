@@ -9,6 +9,7 @@ interface ApiService {
     @GET("movie/popular")
     suspend fun fetchPopularMovies(
         @Query("page") page: Int = 1,
-        @Query("api_key") apiKey: String = APIKEY
+        @Query("api_key") apiKey: String = APIKEY,
+        @Query("language") language: String = "en"
     ): PopularResponse
 }
