@@ -27,9 +27,7 @@ fun provideLoggingInterceptor(): HttpLoggingInterceptor {
 fun provideOkHttp(): OkHttpClient {
     return OkHttpClient.Builder()
         .addInterceptor(provideLoggingInterceptor())
-        .callTimeout(30, TimeUnit.SECONDS)
-        .readTimeout(30, TimeUnit.SECONDS)
-        .writeTimeout(30, TimeUnit.SECONDS)
+        .readTimeout(15, TimeUnit.SECONDS)
+        .connectTimeout(15, TimeUnit.SECONDS)
         .build()
-
 }
