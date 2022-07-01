@@ -1,12 +1,14 @@
 package com.alexmumo.cache.entity
 
 import androidx.room.Entity
+import androidx.room.PrimaryKey
 
 @Entity(tableName = "movie_table")
 data class Movie(
+    @PrimaryKey(autoGenerate = false)
+    val id: Int?,
     val adult: Boolean?,
     val backdropPath: String?,
-    val movie_id: Int?,
     val originalLanguage: String?,
     val originalTitle: String?,
     val overview: String?,
@@ -18,5 +20,4 @@ data class Movie(
     val voteAverage: Double?,
     val voteCount: Int?,
     val category: String?,
-    val isFavorite: Boolean?,
 )

@@ -4,5 +4,6 @@ import androidx.room.Entity
 
 @Entity(tableName = "remote_key_table")
 data class RemoteKey(
-    val nextKey: String?
+    val nextKey: String?,
+    val prevKey: String?
 )
