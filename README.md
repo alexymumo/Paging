@@ -14,10 +14,11 @@
 - Kotlin
 
 ## Paging
-- The library components operate in three layers
-        * Repository layer
-        * ViewModel layer
-        * UI layer
+- The library components operate in three layers :-
+- Repository layer
+- ViewModel layer
+- UI layer
+- 
 * Repository Layer - Paging library component in the repository layer is PagingSource. Each PagingSource object defines a source of data
   and how to retrieve data from that source. Another paging library component is the RemoteMediator. Its object handles paging from a layered datasource eg network and local database cache.
 * ViewModel Layer  - Pager component provides public API for constructing instances of PagingData. Component that connects the ViewModel layer to the UI is PagingData
