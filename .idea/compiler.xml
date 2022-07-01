@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
-    <bytecodeTargetLevel target="11" />
+    <bytecodeTargetLevel target="1.7">
+      <module name="Paging.cache" target="11" />
+      <module name="Paging.domain" target="11" />
+      <module name="Paging.presentation" target="11" />
+      <module name="Paging.remote" target="11" />
+    </bytecodeTargetLevel>
   </component>
 </project>
