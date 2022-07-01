@@ -14,5 +14,6 @@ dependencyResolutionManagement {
 }
 rootProject.name = "Paging"
 include ':presentation'
-include ':data'
 include ':domain'
+include ':remote'
+include ':cache'
