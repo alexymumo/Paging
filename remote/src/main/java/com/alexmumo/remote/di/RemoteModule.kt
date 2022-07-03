@@ -1,5 +1,6 @@
 package com.alexmumo.remote.di
 
+import com.alexmumo.common.Constants.BASE_URL
 import com.alexmumo.remote.api.MovieApi
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -11,7 +12,7 @@ import java.util.concurrent.TimeUnit
 val remoteModule = module {
     single {
         Retrofit.Builder()
-            .baseUrl("dekut.com")
+            .baseUrl(BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
             .client(provideOkHttp())
             .build()
